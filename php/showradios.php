@@ -6,7 +6,7 @@ $name = $_GET['name'];
 // on se connecte à notre base de données
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=radiodentaires', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd = new PDO('mysql:host=localhost;dbname=radiodentaires', 'root', 'root');
 }
 catch (Exception $e)
 {
@@ -21,7 +21,7 @@ $requete->execute(array('name' => $name));
 //echo $name;
 while($donnees = $requete->fetch()){
     $rx=$donnees['rxname'];
-    echo "<img src='radio/$rx' >";
+    echo "<a href='radios/$rx' target='_blank' ><img src='radios/$rx' title='$rx' class='easyui-tooltip' ></a>";
 }
 
 $requete->closeCursor();
