@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ajax Form - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/events.js"></script>
+</head>
+<body>
+	<h2>Ajax Form Demo</h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>Type in input box and submit the form.</div>
+	</div>
+	
+	<div class="easyui-panel" title="Ajax Form" style="width:300px;padding:10px;">
+		<form id="ff" method="post" enctype="multipart/form-data">
+			<table>
+	            <tr>
+	                <td>Name:</td>
+	                <td><input name="name" class="f1 easyui-textbox"></td>
+	            </tr>
+				<tr>
+					<td>File:</td>
+					<td><input name="fileToUpload" id="fileToUpload" class="f1 easyui-filebox"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<!--<input name="submit" type="submit" value="Submit">-->
+						<a id="btnAddRadio" href="#" class="easyui-linkbutton" iconCls="icon-add" >ajouter une radio</a>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<a id="btnShowRadio" href="#" class="easyui-linkbutton" iconCls="icon-tip" >Voir les radios</a>
+	<div id="pRadios" class="easyui-panel" title="Radios" style="width:800px;padding:10px;">
+		
+	</div>
+	<style scoped>
+		.f1{
+			width:200px;
+		}
+	</style>
+
+</body>
+</html>
