@@ -40,7 +40,7 @@ if ($uploadOk == 0) {
 		// on se connecte à notre base de données
 		try
 		{
-		    $bdd = new PDO('mysql:host=localhost;dbname=radiodentaires', 'root', 'root');
+		    $bdd = new PDO('mysql:host=localhost;dbname=dentaire', 'root', 'root');
 		}
 		catch (Exception $e)
 		{

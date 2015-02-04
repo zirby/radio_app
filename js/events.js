@@ -26,11 +26,13 @@ $(document).ready(function(){
 	});
 
 	$('#btnShowRadio').click(function(){
+		var lename = $("#name").val();
 		$.ajax({
-		  url: "php/showradios.php?name=toto",
+		  url: "php/showradios.php?name="+lename,
 		  dataType: "html"
 		})
 		  .done(function( html ) {
+		  	 $( "#pRadios" ).text( "");
 		    $( "#pRadios" ).append( html );
 		  });
 	});
