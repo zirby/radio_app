@@ -9,7 +9,7 @@ if($check !== false) {
 	$message.="File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
 } else {
-	$message.="File is not an image.";
+	$message.="File is not an image at ". $target_file;
     $uploadOk = 0;
 }
 // Check if file already exists
